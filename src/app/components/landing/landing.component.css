@@ -8,12 +8,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
   overflow: hidden;
+  font-family: 'topaz_a500', sans-serif;
 }
 
 .top {
   display: flex;
   flex-direction: row;
   height: 33px;
+  flex-shrink: 0;
 }
 
 .top-left {
@@ -42,6 +44,7 @@
   display: flex;
   flex-direction: column;
   width: 30px;
+  flex-shrink: 0;
 }
 
 .middle-left-top {
@@ -70,11 +73,11 @@
 .info {
   padding: 13px;
   flex-grow: 1;
-  font-family: 'topaz_a500', sans-serif;
+
 }
 
 .menu {
-  height: 60px;
+  height: 80px;
 }
 
 .button_login {
@@ -87,10 +90,25 @@
   cursor: pointer;
 }
 
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  padding-right: 100px;
+}
+
+.button-text {
+  margin-top: 1px;
+  text-align: center;
+  padding-right: 30px;
+}
+
 .middle-right {
   display: flex;
   flex-direction: column;
   width: 30px;
+  flex-shrink: 0;
 }
 
 .middle-right-top {
