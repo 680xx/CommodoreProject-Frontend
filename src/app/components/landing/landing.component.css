@@ -1,0 +1,132 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 360px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  font-family: 'Topaz8', math;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  height: 33px;
+}
+
+.top-left {
+  width: 233px;
+  background-image: url('../../../assets/backgrounds/window_top_left.png');
+
+}
+
+.top-middle {
+  flex-grow: 1;
+  background-image: url('../../../assets/backgrounds/window_top_middle.png');
+}
+
+.top-right {
+  width: 102px;
+  background-image: url('../../../assets/backgrounds/window_top_right.png');
+}
+
+.middle {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.middle-left {
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+}
+
+.middle-left-top {
+  height: 27px;
+  background-image: url('../../../assets/backgrounds/window_middle_left-top.png');
+}
+
+.middle-left-center {
+  flex-grow: 1;
+  background-image: url('../../../assets/backgrounds/window_middle_left-center.png');
+}
+
+.middle-left-bottom {
+  height: 24px;
+  background-image: url('../../../assets/backgrounds/window_middle_left-bottom.png');
+}
+
+.middle-middle {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-image: url('../../../assets/backgrounds/main.png');
+  background-repeat: repeat;
+}
+
+.info {
+  padding: 13px;
+  flex-grow: 1;
+}
+
+.menu {
+  height: 60px;
+}
+
+.button_login {
+  width: 126px;
+  height: 50px;
+  background-image: url('../../../assets/icons/drawer_closed.png');
+  background-size: cover;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+
+.middle-right {
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+}
+
+.middle-right-top {
+  height: 29px;
+  background-image: url('../../../assets/backgrounds/window_middle_right-top.png');
+}
+
+.middle-right-center {
+  flex-grow: 1;
+  background-image: url('../../../assets/backgrounds/window_middle_right-center.png');
+}
+
+.middle-right-bottom {
+  height: 29px;
+  background-image: url('../../../assets/backgrounds/window_middle_right-bottom.png');
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+}
+
+.bottom-left {
+  width: 34px;
+  background-image: url('../../../assets/backgrounds/window_bottom_left.png');
+}
+
+.bottom-middle {
+  flex-grow: 1;
+  background-image: url('../../../assets/backgrounds/window_bottom_middle.png');
+  background-repeat: repeat;
+}
+
+.bottom-right {
+  width: 59px;
+  background-image: url('../../../assets/backgrounds/window_bottom_right.png');
+}
+
