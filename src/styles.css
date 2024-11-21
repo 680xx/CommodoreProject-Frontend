@@ -1,8 +1,7 @@
 @font-face {
-  font-family: 'Topaz8'; /* Namnge fonten */
-  src: url('/assets/fonts/topaz8.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'topaz_a500';
+  src: url('assets/fonts/topaz_a500.ttf') format('truetype');
+  font-weight: 500;
 }
 
 body {

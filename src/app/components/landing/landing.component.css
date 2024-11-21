@@ -8,7 +8,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   overflow: hidden;
-  font-family: 'Topaz8', math;
 }
 
 .top {
@@ -71,6 +70,7 @@
 .info {
   padding: 13px;
   flex-grow: 1;
+  font-family: 'topaz_a500', sans-serif;
 }
 
 .menu {
