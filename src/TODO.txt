@@ -1,5 +1,8 @@
-﻿Transparent drawer icon (login)
+﻿Update graphics
+Transparent drawer icon (login)
 Single/Double click drawer (JavaScript)
 Workbench window : active/inactive
 
+rename ccs classes
 
+fix favicon.ico

@@ -1,0 +1,166 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 360px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  font-family: 'topaz_a500', sans-serif;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  height: 33px;
+  flex-shrink: 0;
+}
+
+.top-left {
+  width: 233px;
+  background-image: url('../../../assets/backgrounds/window_top_left.png');
+}
+
+.top-middle {
+  flex-grow: 1;
+  background-image: url('../../../assets/backgrounds/window_top_middle.png');
+}
+
+.top-right {
+  width: 102px;
+  background-image: url('../../../assets/backgrounds/window_top_right.png');
+}
+
+.middle {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.middle-left {
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  flex-shrink: 0;
+}
+
+.middle-left-top {
+  height: 27px;
+  background-image: url('../../../assets/backgrounds/window_middle_left-top.png');
+}
+
+.middle-left-center {
+  flex-grow: 1;
+  background-image: url('../../../assets/backgrounds/window_middle_left-center.png');
+}
+
+.middle-left-bottom {
+  height: 24px;
+  background-image: url('../../../assets/backgrounds/window_middle_left-bottom.png');
+}
+
+.middle-middle {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-image: url('../../../assets/backgrounds/main.png');
+  background-repeat: repeat;
+  padding: 13px;
+}
+
+.menu {
+  height: 80px;
+  margin-top: auto;
+}
+
+.button_login {
+  width: 126px;
+  height: 50px;
+  background-image: url('../../../assets/icons/drawer_closed.png');
+  background-size: cover;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+
+}
+
+.button_register {
+  width: 126px;
+  height: 50px;
+  background-image: url('../../../assets/icons/drawer_qmark.png');
+  background-size: cover;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: end;
+  padding-right: 40px;
+  gap: 20px;
+}
+
+.button_text-container {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: end;
+  padding-right: 40px;
+  gap: 40px;
+}
+
+.button-text {
+  margin-top: 1px;
+  text-align: center;
+  padding-right: 30px;
+}
+
+.middle-right {
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  flex-shrink: 0;
+}
+
+.middle-right-top {
+  height: 29px;
+  background-image: url('../../../assets/backgrounds/window_middle_right-top.png');
+}
+
+.middle-right-center {
+  flex-grow: 1;
+  background-image: url('../../../assets/backgrounds/window_middle_right-center.png');
+}
+
+.middle-right-bottom {
+  height: 29px;
+  background-image: url('../../../assets/backgrounds/window_middle_right-bottom.png');
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+}
+
+.bottom-left {
+  width: 34px;
+  background-image: url('../../../assets/backgrounds/window_bottom_left.png');
+}
+
+.bottom-middle {
+  flex-grow: 1;
+  background-image: url('../../../assets/backgrounds/window_bottom_middle.png');
+  background-repeat: repeat;
+}
+
+.bottom-right {
+  width: 59px;
+  background-image: url('../../../assets/backgrounds/window_bottom_right.png');
+}
+

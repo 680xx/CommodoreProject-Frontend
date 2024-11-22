@@ -1,9 +1,9 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideRouter } from '@angular/router';
-import { LandingComponent} from './app/components/landing/landing.component';
+import { LayoutLandingComponent} from './app/components/layout-landing/layout-landing.component';
 import { routes } from './app/app.routes';
 
-bootstrapApplication(LandingComponent, {
+bootstrapApplication(LayoutLandingComponent, {
   providers: [
     provideRouter(routes) // Lägg till routes här om det behövs
   ],
