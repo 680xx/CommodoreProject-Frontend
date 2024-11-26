@@ -1,5 +1,16 @@
-.info {
-  flex-grow: 1;
+.container {
+  display: flex;
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  font-family: 'topaz_a500', sans-serif;
+  background-image: url('../../../assets/backgrounds/landing.png');
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ccc;
+  box-shadow: 4px 4px 20px rgba(12, 12, 12, 1);
 }
-
-

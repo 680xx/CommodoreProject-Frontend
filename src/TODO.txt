@@ -1,7 +1,6 @@
-﻿Update graphics
+﻿
 Single/Double click drawer (JavaScript)
+
 Workbench window : active/inactive
 
 rename ccs classes
-
-fix favicon.ico

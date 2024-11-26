@@ -1,10 +1,10 @@
 .default {
   display: flex;
   flex-direction: column;
-/*  width: 1280px;
-  height: 960px;  */
-  width: 800px;
-  height: 600px;
+  width: 1280px;
+  height: 960px;
+  /*width: 800px;*/
+  /*height: 600px;*/
   position: absolute;
   top: 50%;
   left: 50%;
