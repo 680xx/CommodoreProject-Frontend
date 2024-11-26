@@ -1,8 +1,10 @@
 .default {
   display: flex;
   flex-direction: column;
-  width: 1280px;
-  height: 960px;
+/*  width: 1280px;
+  height: 960px;  */
+  width: 800px;
+  height: 600px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -16,11 +18,11 @@
 .titleBar {
   display: flex;
   flex-direction: row;
-  height: 35px;
+  height: 39px;
 }
 
 .titleBar_left{
-  width: 628px;
+  width: 660px;
   background-image: url('../../../assets/backgrounds/wbbar_left.png');
 }
 
@@ -30,7 +32,7 @@
 }
 
 .titleBar_right {
-  width: 99px;
+  width: 111px;
   background-image: url('../../../assets/backgrounds/wbbar_right.png');
 }
 
@@ -48,12 +50,12 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  padding-top: 50px;
+  padding-top: 4%;
   justify-content: start;
   align-items: center;
 }
 
-.button_login, .button_register {
+.button_login, .button_login2, .button_register,  .button_register2 {
   display: flex;
   background-color: transparent;
   background-size: cover;
@@ -62,18 +64,18 @@
 }
 
 .button {
-  padding-top: 20px;
+  padding-top: 14%;
 }
 
 .button_login {
-  width: 59px;
-  height: 55px;
+  width: 62px;
+  height: 61px;
   background-image: url('../../../assets/icons/disk_ram.png');
 }
 
 .button_register {
-  width: 65px;
-  height: 52px;
+  width: 67px;
+  height: 58px;
   background-image: url('../../../assets/icons/disk.png');
 }
 
