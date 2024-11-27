@@ -1,21 +1,51 @@
-<div class="login-container">
-  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <div>
-      <label for="username">Användarnamn</label>
-      <input id="username" formControlName="username" type="text" placeholder="Ange användarnamn" />
-      <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
-        <small>Användarnamn krävs.</small>
-      </div>
+<div class="container">
+  <div class="top">
+    <div class="top-left"></div>
+    <div class="top-middle"></div>
+    <div class="top-right"></div>
+  </div>
+  <div class="middle">
+    <div class="middle-left">
+      <div class="middle-left-top"></div>
+      <div class="middle-left-center"></div>
+      <div class="middle-left-bottom"></div>
     </div>
+    <div class="middle-middle">
 
-    <div>
-      <label for="password">Lösenord</label>
-      <input id="password" formControlName="password" type="password" placeholder="Ange lösenord" />
-      <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
-        <small>Lösenord krävs och måste vara minst 6 tecken.</small>
+
+      <div class="login-container">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="form-username">
+            <label for="username">Username</label>
+            <input id="username" formControlName="username" type="text" placeholder="Enter username" />
+            <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
+              <small>Username required.</small>
+            </div>
+          </div>
+          <div class="form-password">
+            <label for="password">Password</label>
+            <input id="password" formControlName="password" type="password" placeholder="Enter password" />
+            <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+              <small>Password required.</small>
+            </div>
+          </div>
+          <div class="form-button">
+            <button type="submit" [disabled]="loginForm.invalid">Login</button>
+          </div>
+        </form>
       </div>
-    </div>
 
-    <button type="submit" [disabled]="loginForm.invalid">Logga in</button>
-  </form>
+
+    </div>
+    <div class="middle-right">
+      <div class="middle-right-top"></div>
+      <div class="middle-right-center"></div>
+      <div class="middle-right-bottom"></div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="bottom-left"></div>
+    <div class="bottom-middle"></div>
+    <div class="bottom-right"></div>
+  </div>
 </div>
