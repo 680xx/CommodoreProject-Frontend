@@ -12,18 +12,7 @@
     </div>
     <div class="middle-middle">
 
-
-
-      <div class="menu">
-        <div class="button-container">
-          <button class="button_login" (click)="onLoginClick()"></button>
-          <button class="button_register" (click)="onRegisterClick()"></button>
-        </div>
-        <div class="button_text-container">
-          <p class="button-text">Logga in</p>
-          <p class="button-text">Registrera</p>
-        </div>
-      </div>
+      <ng-container *ngComponentOutlet="currentComponent2"></ng-container>
 
     </div>
     <div class="middle-right">

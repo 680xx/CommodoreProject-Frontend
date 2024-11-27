@@ -1,5 +1,21 @@
-<div class="info">
-  <h4 style="text-align: center;">login</h4>
-  <p>
-  </p>
+<div class="login-container">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="username">Användarnamn</label>
+      <input id="username" formControlName="username" type="text" placeholder="Ange användarnamn" />
+      <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
+        <small>Användarnamn krävs.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="password">Lösenord</label>
+      <input id="password" formControlName="password" type="password" placeholder="Ange lösenord" />
+      <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+        <small>Lösenord krävs och måste vara minst 6 tecken.</small>
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="loginForm.invalid">Logga in</button>
+  </form>
 </div>

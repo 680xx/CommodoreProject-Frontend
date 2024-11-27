@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { LoginComponent } from '../login/login.component';
 import { NgComponentOutlet } from '@angular/common';
 import { LandingComponent } from '../landing/landing.component';
 import { LayoutLandingComponent} from '../layout-landing/layout-landing.component';
+import { LoginComponent } from '../login/login.component';
+import {ComponentStateService} from '../../services/component-state.service';
 
 @Component({
   selector: 'app-default',
@@ -13,13 +14,16 @@ import { LayoutLandingComponent} from '../layout-landing/layout-landing.componen
 })
 
 export class DefaultComponent {
+  constructor(private componentStateService: ComponentStateService) {}
   currentComponent: any = LandingComponent;
 
   onLoginClick() {
-    this.currentComponent = LayoutLandingComponent;  }
+    this.currentComponent = LayoutLandingComponent;
+    this.componentStateService.setCurrentComponent(LoginComponent);
+  }
 
   onRegisterClick() {
-    this.currentComponent = LayoutLandingComponent;
+    // this.currentComponent = LayoutLandingComponent;
   }
 
 }

@@ -11,6 +11,6 @@
   background-image: url('../../../assets/backgrounds/landing.png');
   justify-content: center;
   align-items: center;
-  border: 2px solid #ccc;
-  box-shadow: 4px 4px 20px rgba(12, 12, 12, 1);
+  border: 1px solid #333;
+  box-shadow: 4px 4px 20px rgba(00, 40, 80, 3);
 }

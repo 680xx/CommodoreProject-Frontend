@@ -1,28 +1,22 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { NgComponentOutlet } from '@angular/common';
-import { LandingComponent } from '../landing/landing.component';
-import {LoginComponent} from '../login/login.component';
-import {RegisterComponent} from '../register/register.component';
+import {ComponentStateService} from '../../services/component-state.service';
 
 @Component({
   selector: 'app-layout-landing',
   standalone: true,
-  imports: [
-    NgComponentOutlet
-  ],
+  imports: [ NgComponentOutlet ],
   templateUrl: './layout-landing.component.html',
   styleUrl: './layout-landing.component.css'
 })
-export class LayoutLandingComponent {
-  currentComponent: any = LandingComponent;
+export class LayoutLandingComponent implements OnInit {
+  currentComponent2: any;
 
-  // Handle button clicks to change the displayed component
-  onLoginClick() {
-    this.currentComponent = LoginComponent;
-  }
+  constructor(private componentStateService: ComponentStateService) { }
 
-  onRegisterClick() {
-    this.currentComponent = RegisterComponent;
-  }
-}
+  ngOnInit() {
+    this.componentStateService.currentComponent$.subscribe(component => {
+      this.currentComponent2 = component;
+    });
+}}
 
