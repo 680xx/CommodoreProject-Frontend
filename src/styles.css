@@ -8,4 +8,8 @@ body {
   background-image: url('assets/backgrounds/main.png');
   background-repeat: repeat;
   color: #ffffff;
+  cursor: url('/assets/cursors/pointer.png'), auto;
+
 }
+
+
