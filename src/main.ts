@@ -1,11 +1,10 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideRouter } from '@angular/router';
-// import { LayoutLandingComponent} from './app/components/layout-landing/layout-landing.component';
 import { routes } from './app/app.routes';
-import {DefaultComponent} from './app/components/default/default.component';
+import {AppComponent} from './app/app.component';
 
-bootstrapApplication(DefaultComponent, {
+bootstrapApplication(AppComponent, {
   providers: [
-    provideRouter(routes) // Lägg till routes här om det behövs
+    provideRouter(routes)
   ],
 }).catch((err) => console.error(err));

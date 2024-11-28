@@ -1,12 +1,24 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Router, RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet],
-  template: `<router-outlet></router-outlet>`
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'CommodoreProject-Frontend';
+
+  constructor(private router: Router) {}
+
+onLoginClick() {
+  this.router.navigate(['/login']);
+}
+
+onRegisterClick() {
+  this.router.navigate(['/register'])
+}
+
 }
