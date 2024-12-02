@@ -13,7 +13,39 @@
     <div class="middle-middle">
 
 
-      register
+      <div class="register-container">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <div class="form-fullName">
+            <label for="fullName">Full Name</label>
+            <input
+              id="fullName"
+              formControlName="fullName">
+          </div>
+          <div class="form-email">
+            <label for="email">E-Mail</label>
+            <input
+              id="email"
+              formControlName="email">
+          </div>
+          <div class="form-password">
+            <label for="password">Password</label>
+            <input
+              id="password"
+              formControlName="password"
+              type="password">
+          </div>
+          <div class="form-confirmPassword">
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+              id="confirmPassword"
+              formControlName="confirmPassword"
+              type="password">
+          </div>
+          <div class="form-button">
+            <button type="submit">Register</button>
+          </div>
+        </form>
+      </div>
 
 
     </div>
