@@ -15,23 +15,37 @@
 
       <div class="login-container">
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
           <div class="form-username">
             <label for="username">Username</label>
-            <input id="username" formControlName="username" type="text" placeholder="Enter username" />
-            <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
+            <input id="username" formControlName="username">
+            <div *ngIf="hasDisplayableError('username') && loginForm.controls['username'].hasError('required')">
               <small>Username required.</small>
             </div>
           </div>
+
           <div class="form-password">
             <label for="password">Password</label>
-            <input id="password" formControlName="password" type="password" placeholder="Enter password" />
-            <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
-              <small>Password required.</small>
+            <input id="password" formControlName="password" type="password">
+            <div *ngIf="hasDisplayableError('password')">
+              <ng-container [ngSwitch]="loginForm.controls['password'].errors | firstKey">
+                <div *ngSwitchCase="'required'">
+                  <small>Please enter your password.</small>
+                </div>
+                <div *ngSwitchCase="'minlength'">
+                  <small>At least 6 characters required.</small>
+                </div>
+                <div *ngSwitchCase="'pattern'">
+                  <small>One or more special character(s).</small>
+                </div>
+              </ng-container>
             </div>
           </div>
+
           <div class="form-button">
             <button type="submit" [disabled]="loginForm.invalid">Login</button>
           </div>
+
         </form>
       </div>
 

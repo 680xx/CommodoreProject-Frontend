@@ -15,40 +15,63 @@
 
       <div class="register-container">
         <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
           <div class="form-fullName">
             <label for="fullName">Full Name</label>
-            <input
-              id="fullName"
-              formControlName="fullName">
+            <input id="fullName" formControlName="fullName">
+            <div *ngIf="hasDisplayableError('fullName') && registerForm.controls['fullName'].hasError('required')">
+              <small>Please enter your full name.</small>
+            </div>
           </div>
+
           <div class="form-email">
             <label for="email">E-Mail</label>
-            <input
-              id="email"
-              formControlName="email">
+            <input id="email" formControlName="email">
+            <div *ngIf="hasDisplayableError('email')">
+              <div *ngIf="registerForm.controls['email'].hasError('required')">
+                <small>Please enter your email address.</small>
+              </div>
+              <div *ngIf="registerForm.controls['email'].hasError('email')">
+                <small>Please enter a valid email address.</small>
+              </div>
+            </div>
           </div>
+
           <div class="form-password">
             <label for="password">Password</label>
-            <input
-              id="password"
-              formControlName="password"
-              type="password">
+            <input id="password" formControlName="password" type="password">
+            <div *ngIf="hasDisplayableError('password')">
+              <ng-container [ngSwitch]="registerForm.controls['password'].errors | firstKey">
+                <div *ngSwitchCase="'required'">
+                  <small>Please enter your password.</small>
+                </div>
+                <div *ngSwitchCase="'minlength'">
+                  <small>At least 6 characters required.</small>
+                </div>
+                <div *ngSwitchCase="'pattern'">
+                  <small>One or more special character(s).</small>
+                </div>
+              </ng-container>
+            </div>
           </div>
+
           <div class="form-confirmPassword">
             <label for="confirmPassword">Confirm Password</label>
-            <input
-              id="confirmPassword"
-              formControlName="confirmPassword"
-              type="password">
+            <input id="confirmPassword" formControlName="confirmPassword" type="password">
+            <div *ngIf="hasDisplayableError('confirmPassword') && registerForm.controls['confirmPassword'].hasError('passwordMismatch')">
+              <small>Password doesn't match.</small>
+            </div>
           </div>
+
           <div class="form-button">
-            <button type="submit">Register</button>
+            <button type="submit" [disabled]="registerForm.invalid">Register</button>
           </div>
+
         </form>
       </div>
-
-
     </div>
+
+
     <div class="middle-right">
       <div class="middle-right-top"></div>
       <div class="middle-right-center"></div>

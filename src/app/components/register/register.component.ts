@@ -1,57 +1,57 @@
 import {Component, OnInit} from '@angular/core';
 import {AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, ValidatorFn, Validators} from '@angular/forms';
+import {CommonModule} from '@angular/common';
+import {FirstKeyPipe} from '../../pipes/first-key.pipe';
+
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, CommonModule, FirstKeyPipe],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
 export class RegisterComponent implements OnInit {
-  registerForm = FormGroup;
+  constructor(public formBuilder: FormBuilder) { }
+  registerForm!: FormGroup;
+  isSubmitted:boolean = false;
 
-  constructor(private formBuilder: FormBuilder) { }
+  passwordMatchValidator: ValidatorFn = (control:AbstractControl):null => {
+    const password = control.get('password')
+    const confirmPassword = control.get('confirmPassword')
 
-  ngOnInit(): void {
-    this.registerForm = this.formBuilder.group({
-  })
+    if(password && confirmPassword && password.value != confirmPassword.value)
+      confirmPassword?.setErrors({passwordMismatch:true})
+    else
+      confirmPassword?.setErrors(null)
 
+    return null;
   }
-}
 
-/*
-
-import {Component} from '@angular/core';
-import {AbstractControl, FormBuilder, ReactiveFormsModule, Validators} from '@angular/forms';
-import {NgIf} from '@angular/common';
-
-@Component({
-  selector: 'app-register',
-  standalone: true,
-  imports: [ReactiveFormsModule],
-  templateUrl: './register.component.html',
-  styleUrl: './register.component.css'
-})
-export class RegisterComponent {
-  registerForm;
-
-  constructor(private fb: FormBuilder) {
-
-    this.registerForm = this.fb.group({
+  ngOnInit() {
+    this.registerForm = this.formBuilder.group({
       fullName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],   // Validators.email = Email Structure
-      password: ['', [Validators.required, Validators.minLength(6), Validators.pattern(/(?=.*[ˆa-zA-Z0-9 ])/)]],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6), Validators.pattern(/(?=.*[^a-zA-Z0-9 ])/)]],
       confirmPassword: [''],
-    }, {Validators:this.passwordMatchValidator})
-
-    passwordMatchValidator: ValidatorFn = (control: AbstractControl): null => {
-    }
-
+    }, {validators: this.passwordMatchValidator})
   }
 
   onSubmit() {
+    this.isSubmitted = true;
     console.log(this.registerForm.value)
   }
+
+  hasDisplayableError(controlName: string):Boolean {
+    const control = this.registerForm.get(controlName);
+    return Boolean(control?.invalid) &&
+      (this.isSubmitted || Boolean(control?.touched))
+  }
+
 }
-*/
+
+
+
+
+
+

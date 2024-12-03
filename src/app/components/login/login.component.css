@@ -182,16 +182,13 @@
   flex: 1;
 }
 
-.form-username {
-  height: 100px;
-}
-
-.form-password {
-  height: 100px;
+.form-username, .form-password {
+  height: 94px;
+  position: relative;
 }
 
 .form-button {
-  padding-top: 14px;
+  padding-top: 20px;
 }
 
 form div {
