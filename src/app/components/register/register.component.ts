@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, ValidatorFn, Validators} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 import {FirstKeyPipe} from '../../pipes/first-key.pipe';
+import {AuthService} from '../../services/auth.service';
 
 
 @Component({
@@ -12,9 +13,12 @@ import {FirstKeyPipe} from '../../pipes/first-key.pipe';
   styleUrl: './register.component.css'
 })
 export class RegisterComponent implements OnInit {
-  constructor(public formBuilder: FormBuilder) { }
+  constructor(public formBuilder: FormBuilder, private service: AuthService) { }
   registerForm!: FormGroup;
   isSubmitted:boolean = false;
+  showSuccessPopup:boolean = false;
+  showFailEmailPopup:boolean = false;
+  showFailDefaultPopup:boolean = false;
 
   passwordMatchValidator: ValidatorFn = (control:AbstractControl):null => {
     const password = control.get('password')
@@ -39,13 +43,56 @@ export class RegisterComponent implements OnInit {
 
   onSubmit() {
     this.isSubmitted = true;
-    console.log(this.registerForm.value)
+    if (this.registerForm.valid) {
+      this.service.createUser(this.registerForm.value)
+        .subscribe({
+        next: (res: any) => {
+          if (res.succeeded) {
+            this.registerForm.reset();
+            this.isSubmitted = false;
+
+            this.showSuccessPopup = true;
+            setTimeout(() => {
+              this.showSuccessPopup = false;
+            }, 3000);
+
+          }
+        },
+        error: err => {
+          if(err.error.errors)
+          err.error.errors.forEach((x:any) => {
+            switch(x.code) {
+
+              case "DuplicateUserName":
+                break;
+
+              case "DuplicateEmail":
+                this.showFailEmailPopup = true;
+                setTimeout(() => {
+                  this.showFailEmailPopup = false;
+                }, 3000);
+                break;
+
+              default:
+                this.showFailDefaultPopup = true;
+                setTimeout(() => {
+                  this.showFailDefaultPopup = false;
+                }, 3000);
+                console.log(x);
+                break;
+            }
+          })
+          else
+            console.log('error:',err);
+        }
+      });
+    }
   }
 
   hasDisplayableError(controlName: string):Boolean {
     const control = this.registerForm.get(controlName);
     return Boolean(control?.invalid) &&
-      (this.isSubmitted || Boolean(control?.touched))
+      (this.isSubmitted || Boolean(control?.touched) || Boolean(control?.dirty))
   }
 
 }

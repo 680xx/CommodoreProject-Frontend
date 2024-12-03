@@ -71,6 +71,17 @@
       </div>
     </div>
 
+    <div *ngIf="showSuccessPopup" class="popup-success">
+      Registration successful!
+    </div>
+
+    <div *ngIf="showFailEmailPopup" class="popup-fail">
+      Registration failed! Duplicate e-mail.
+    </div>
+
+    <div *ngIf="showFailDefaultPopup" class="popup-fail">
+      Registration failed! Please try again.
+    </div>
 
     <div class="middle-right">
       <div class="middle-right-top"></div>

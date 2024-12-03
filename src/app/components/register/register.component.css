@@ -226,3 +226,41 @@ small {
   padding-left: 4px;
   color: red;
 }
+
+.popup-success, .popup-fail {
+  position: fixed;
+  top: 70%;
+  left: 70%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: fadeInOut 3s ease-in-out forwards;
+}
+
+.popup-success {
+  background-color: #3d7fd7;
+  color: white;
+}
+
+.popup-fail {
+  background-color: #be1010;
+  color: white;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

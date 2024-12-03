@@ -29,6 +29,6 @@ export class LoginComponent {
   hasDisplayableError(controlName: string):Boolean {
     const control = this.loginForm.get(controlName);
     return Boolean(control?.invalid) &&
-      (this.isSubmitted || Boolean(control?.touched))
+      (this.isSubmitted || Boolean(control?.touched) || Boolean(control?.dirty))
   }
 }
