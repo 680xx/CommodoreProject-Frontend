@@ -1,6 +1,10 @@
 ﻿
-Single/Double click drawer (JavaScript)
+Single/Double click icons (JavaScript)
 
-Workbench window : active/inactive
+Workbench window : active/inactive/move?
 
 rename ccs classes
+
+monitor background
+
+kinder eggs (background)
