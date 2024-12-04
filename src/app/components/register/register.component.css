@@ -229,10 +229,10 @@ small {
 
 .popup-success, .popup-fail {
   position: fixed;
-  top: 70%;
-  left: 70%;
+  top: 77%;
+  left: 68%;
   text-align: center;
-  transform: translate(-50%, -50%);
+  transform: translate(-36%, -36%);
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

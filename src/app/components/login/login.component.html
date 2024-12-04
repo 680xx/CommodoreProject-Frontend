@@ -16,29 +16,19 @@
       <div class="login-container">
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
-          <div class="form-username">
-            <label for="username">Username</label>
-            <input id="username" formControlName="username">
-            <div *ngIf="hasDisplayableError('username') && loginForm.controls['username'].hasError('required')">
-              <small>Username required.</small>
+          <div class="form-email">
+            <label for="email">Email</label>
+            <input id="email" formControlName="email">
+            <div *ngIf="hasDisplayableError('email') && loginForm.controls['email'].hasError('required')">
+              <small>Please enter your email address.</small>
             </div>
           </div>
 
           <div class="form-password">
             <label for="password">Password</label>
             <input id="password" formControlName="password" type="password">
-            <div *ngIf="hasDisplayableError('password')">
-              <ng-container [ngSwitch]="loginForm.controls['password'].errors | firstKey">
-                <div *ngSwitchCase="'required'">
+            <div *ngIf="hasDisplayableError('password') && loginForm.controls['password'].hasError('required')">
                   <small>Please enter your password.</small>
-                </div>
-                <div *ngSwitchCase="'minlength'">
-                  <small>At least 6 characters required.</small>
-                </div>
-                <div *ngSwitchCase="'pattern'">
-                  <small>One or more special character(s).</small>
-                </div>
-              </ng-container>
             </div>
           </div>
 
@@ -47,6 +37,10 @@
           </div>
 
         </form>
+      </div>
+
+      <div *ngIf="showFailPopup" class="popup-fail">
+        Login failed! <br>Wrong email/password.
       </div>
 
 

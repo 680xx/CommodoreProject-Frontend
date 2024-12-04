@@ -182,7 +182,7 @@
   flex: 1;
 }
 
-.form-username, .form-password {
+.form-email, .form-password {
   height: 94px;
   position: relative;
 }
@@ -225,4 +225,34 @@ button:disabled {
 small {
   padding-left: 4px;
   color: red;
+}
+
+.popup-fail {
+  background-color: #be1010;
+  color: white;
+  position: fixed;
+  top: 64%;
+  left: 68%;
+  text-align: center;
+  transform: translate(-36%, -36%);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: fadeInOut 3s ease-in-out forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
