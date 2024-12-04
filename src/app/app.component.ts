@@ -13,6 +13,11 @@ export class AppComponent {
 
   constructor(private router: Router) {}
 
+onLogoutClick() {
+  localStorage.removeItem('token');
+  this.router.navigateByUrl('');
+}
+
 onLoginClick() {
   this.router.navigate(['/login']);
 }
