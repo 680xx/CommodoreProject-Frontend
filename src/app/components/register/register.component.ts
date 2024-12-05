@@ -3,6 +3,7 @@ import {AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, ValidatorF
 import {CommonModule} from '@angular/common';
 import {FirstKeyPipe} from '../../pipes/first-key.pipe';
 import {AuthService} from '../../services/auth.service';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -13,7 +14,7 @@ import {AuthService} from '../../services/auth.service';
   styleUrl: './register.component.css'
 })
 export class RegisterComponent implements OnInit {
-  constructor(public formBuilder: FormBuilder, private service: AuthService) { }
+  constructor(public formBuilder: FormBuilder, private service: AuthService, private router: Router) { }
   registerForm!: FormGroup;
   isSubmitted:boolean = false;
   showSuccessPopup:boolean = false;
@@ -33,6 +34,9 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit() {
+    if(this.service.isLoggedIn())
+      this.router.navigateByUrl('/dashboard')
+
     this.registerForm = this.formBuilder.group({
       fullName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -94,7 +98,6 @@ export class RegisterComponent implements OnInit {
     return Boolean(control?.invalid) &&
       (this.isSubmitted || Boolean(control?.touched) || Boolean(control?.dirty))
   }
-
 }
 
 

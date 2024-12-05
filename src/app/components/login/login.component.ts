@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule, NgIf } from '@angular/common';
 import {AuthService} from '../../services/auth.service';
 import {Router} from '@angular/router';
+import {TOKEN_KEY} from '../../constants';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ import {Router} from '@angular/router';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   isSubmitted:boolean = false;
   showFailPopup:boolean = false;
@@ -29,7 +30,7 @@ export class LoginComponent {
     {
       this.service.signIn(this.loginForm.value).subscribe({
         next:(res:any) => {
-          localStorage.setItem('token', res.token);
+          localStorage.setItem(TOKEN_KEY, res.token);
           this.router.navigateByUrl('/dashboard')
         },
         error:err=>{
@@ -51,5 +52,10 @@ export class LoginComponent {
     const control = this.loginForm.get(controlName);
     return Boolean(control?.invalid) &&
       (this.isSubmitted || Boolean(control?.touched) || Boolean(control?.dirty))
+  }
+
+  ngOnInit(): void {
+    if(this.service.isLoggedIn())
+      this.router.navigateByUrl('/dashboard')
   }
 }

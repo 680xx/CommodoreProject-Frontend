@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Router, RouterOutlet} from '@angular/router';
+import {TOKEN_KEY} from './constants';
 
 @Component({
   selector: 'app-root',
@@ -14,8 +15,8 @@ export class AppComponent {
   constructor(private router: Router) {}
 
 onLogoutClick() {
-  localStorage.removeItem('token');
-  this.router.navigateByUrl('');
+  localStorage.removeItem(TOKEN_KEY);
+  this.router.navigateByUrl('login');
 }
 
 onLoginClick() {
