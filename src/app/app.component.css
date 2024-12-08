@@ -28,7 +28,13 @@
 
 .titleBar_center {
   flex-grow: 1;
+  display: flex;
   background-image: url('/assets/backgrounds/wbbar_center.png');
+  align-items: center;
+  justify-content: end;
+  padding-right: 20px;
+  color: rgb(13,84,160);
+  font-size: 28px;
 }
 
 .titleBar_right {
@@ -82,92 +88,3 @@
 .button-text {
   margin-top: 4px;
 }
-
-
-/*
-
-.default {
-  display: flex;
-  flex-direction: column;
-  width: 1280px;
-  height: 960px;
-  !*  width: 1024px;            // Laptop
-    height: 768px;            // Laptop*!
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-  font-family: 'topaz_a500', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-}
-
-.titleBar {
-  display: flex;
-  flex-direction: row;
-  height: 39px;
-}
-
-.titleBar_left{
-  width: 660px;
-  background-image: url('/assets/backgrounds/wbbar_left.png');
-}
-
-.titleBar_center {
-  flex-grow: 1;
-  background-image: url('/assets/backgrounds/wbbar_center.png');
-}
-
-.titleBar_right {
-  width: 111px;
-  background-image: url('/assets/backgrounds/wbbar_right.png');
-}
-
-.view_sidebar {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: row;
-}
-
-.view {
-  width: 1040px;
-}
-
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  padding-top: 4%;
-  justify-content: start;
-  align-items: center;
-}
-
-.button_login, .button_register {
-  display: flex;
-  background-color: transparent;
-  background-size: cover;
-  border: none;
-  cursor: pointer;
-}
-
-.button {
-  padding-top: 14%;
-}
-
-.button_login {
-  width: 62px;
-  height: 61px;
-  background-image: url('/assets/icons/disk_ram.png');
-}
-
-.button_register {
-  width: 67px;
-  height: 58px;
-  background-image: url('/assets/icons/disk.png');
-}
-
-.button-text {
-  margin-top: 4px;
-}
-*/

@@ -1,7 +1,7 @@
 <div class="default">
   <div class="titleBar">
     <div class="titleBar_left"></div>
-    <div class="titleBar_center"></div>
+    <div class="titleBar_center">{{ fullName ? 'user: ' + fullName : '' }}</div>
     <div class="titleBar_right"></div>
   </div>
   <div class="view_sidebar">
@@ -32,23 +32,3 @@
     </div>
   </div>
 </div>
-
-
-<!--
-</div>
-<div class="sidebar">
-  <div class="button">
-    <button class="button_login" (click)="onLoginClick()"></button>
-  </div>
-  <div class="button_text">
-    Login
-  </div>
-  <div class="button">
-    <button class="button_register" (click)="onRegisterClick()"></button>
-  </div>
-  <div class="button_text">
-    Register
-  </div>
-</div>
-</div>
-</div>-->

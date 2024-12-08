@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { CommonModule, NgIf } from '@angular/common';
 import {AuthService} from '../../services/auth.service';
 import {Router} from '@angular/router';
-import {TOKEN_KEY} from '../../constants';
 
 @Component({
   selector: 'app-login',
@@ -30,7 +29,8 @@ export class LoginComponent implements OnInit {
     {
       this.service.signIn(this.loginForm.value).subscribe({
         next:(res:any) => {
-          localStorage.setItem(TOKEN_KEY, res.token);
+          this.service.saveToken(res.token);
+          window.location.reload();
           this.router.navigateByUrl('/dashboard')
         },
         error:err=>{
