@@ -12,3 +12,31 @@
   justify-content: center;
   align-items: center;
 }
+
+.button {
+  padding-top: 14%;
+}
+
+.button-text {
+  margin-top: 4px;
+}
+
+.button_user-registry {
+  display: flex;
+  background-color: transparent;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+  width: 62px;
+  height: 61px;
+  background-image: url('/assets/icons/disk_ram.png');
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-top: 4%;
+  justify-content: start;
+  align-items: center;
+}

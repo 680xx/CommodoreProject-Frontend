@@ -1,7 +1,8 @@
-import {Component, OnInit} from '@angular/core';
-import {Router, RouterOutlet} from '@angular/router';
-import {TOKEN_KEY} from './constants';
-import {UserService} from './services/user.service';
+import { Component, OnInit } from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
+import { TOKEN_KEY } from './constants';
+import { UserService } from './services/user.service';
+import {AuthService} from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ import {UserService} from './services/user.service';
 export class AppComponent  implements OnInit {
   title = 'CommodoreProject-Frontend';
 
-  constructor(private router: Router, private userService: UserService) {}
+  constructor(private router: Router, private userService: UserService, private authService: AuthService) {}
 
   fullName: string = '';
 
@@ -25,9 +26,9 @@ export class AppComponent  implements OnInit {
   }
 
 onLogoutClick() {
-  localStorage.removeItem(TOKEN_KEY);
-  window.location.reload();
+  this.authService.deleteToken();
   this.router.navigateByUrl('login');
+  window.location.reload();
 }
 
 onLoginClick() {
