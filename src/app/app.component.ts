@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
-import { TOKEN_KEY } from './constants';
 import { UserService } from './services/user.service';
-import {AuthService} from './services/auth.service';
+import { AuthService } from './services/auth.service';
+import { claimReq } from './utils/claimReq-utils';
+import { HideIfClaimsNotMetDirective } from './directives/hide-if-claims-not-met.directive';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, HideIfClaimsNotMetDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -39,4 +41,5 @@ onRegisterClick() {
   this.router.navigate(['/register'])
 }
 
+  protected readonly claimReq = claimReq;
 }

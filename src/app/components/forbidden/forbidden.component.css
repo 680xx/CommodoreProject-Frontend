@@ -8,7 +8,7 @@
   transform: translate(-50%, -50%);
   overflow: hidden;
   font-family: 'topaz_a500', sans-serif;
-  background-image: url('../../../assets/backgrounds/main.png');
+  background-image: url('../../assets/backgrounds/main2.png');
   justify-content: center;
   align-items: center;
 }

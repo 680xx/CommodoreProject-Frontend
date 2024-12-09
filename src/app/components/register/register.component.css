@@ -20,17 +20,17 @@
 
 .top-left {
   width: 250px;
-  background-image: url('../../../assets/backgrounds/window_top_left.png');
+  background-image: url('../../assets/backgrounds/window_top_left.png');
 }
 
 .top-middle {
   flex-grow: 1;
-  background-image: url('../../../assets/backgrounds/window_top_middle.png');
+  background-image: url('../../assets/backgrounds/window_top_middle.png');
 }
 
 .top-right {
   width: 110px;
-  background-image: url('../../../assets/backgrounds/window_top_right.png');
+  background-image: url('../../assets/backgrounds/window_top_right.png');
 }
 
 .middle {
@@ -48,17 +48,17 @@
 
 .middle-left-top {
   height: 34px;
-  background-image: url('../../../assets/backgrounds/window_middle_left-top.png');
+  background-image: url('../../assets/backgrounds/window_middle_left-top.png');
 }
 
 .middle-left-center {
   flex-grow: 1;
-  background-image: url('../../../assets/backgrounds/window_middle_left-center.png');
+  background-image: url('../../assets/backgrounds/window_middle_left-center.png');
 }
 
 .middle-left-bottom {
   height: 26px;
-  background-image: url('../../../assets/backgrounds/window_middle_left-bottom.png');
+  background-image: url('../../assets/backgrounds/window_middle_left-bottom.png');
 }
 
 .middle-middle {
@@ -66,7 +66,7 @@
   height: 100%;
   max-height: 100%;
   max-width: 100%;
-  background-image: url('../../../assets/backgrounds/main.png');
+  background-image: url('../../assets/backgrounds/main2.png');
   background-repeat: repeat;
 }
 
@@ -78,7 +78,7 @@
 .button_login {
   width: 126px;
   height: 50px;
-  background-image: url('../../../assets/icons/drawer_closed.png');
+  background-image: url('../../assets/icons/drawer_closed.png');
   background-color: transparent;
   background-size: cover;
   background-position: center;
@@ -89,7 +89,7 @@
 .button_register {
   width: 126px;
   height: 50px;
-  background-image: url('../../../assets/icons/drawer_qmark.png');
+  background-image: url('../../assets/icons/drawer_qmark.png');
   background-color: transparent;
   background-size: cover;
   background-position: center;
@@ -130,17 +130,17 @@
 
 .middle-right-top {
   height: 30px;
-  background-image: url('../../../assets/backgrounds/window_middle_right-top.png');
+  background-image: url('../../assets/backgrounds/window_middle_right-top.png');
 }
 
 .middle-right-center {
   flex-grow: 1;
-  background-image: url('../../../assets/backgrounds/window_middle_right-center.png');
+  background-image: url('../../assets/backgrounds/window_middle_right-center.png');
 }
 
 .middle-right-bottom {
   height: 31px;
-  background-image: url('../../../assets/backgrounds/window_middle_right-bottom.png');
+  background-image: url('../../assets/backgrounds/window_middle_right-bottom.png');
 }
 
 .bottom {
@@ -151,18 +151,18 @@
 
 .bottom-left {
   width: 35px;
-  background-image: url('../../../assets/backgrounds/window_bottom_left.png');
+  background-image: url('../../assets/backgrounds/window_bottom_left.png');
 }
 
 .bottom-middle {
   flex-grow: 1;
-  background-image: url('../../../assets/backgrounds/window_bottom_middle.png');
+  background-image: url('../../assets/backgrounds/window_bottom_middle.png');
   background-repeat: repeat;
 }
 
 .bottom-right {
   width: 61px;
-  background-image: url('../../../assets/backgrounds/window_bottom_right.png');
+  background-image: url('../../assets/backgrounds/window_bottom_right.png');
 }
 
 

@@ -8,7 +8,7 @@
   transform: translate(-50%, -50%);
   overflow: hidden;
   font-family: 'topaz_a500', sans-serif;
-  background-image: url('../../../assets/backgrounds/main.png');
+  background-image: url('../../assets/backgrounds/main2.png');
   justify-content: center;
   align-items: center;
 }
@@ -29,7 +29,7 @@
   cursor: pointer;
   width: 62px;
   height: 61px;
-  background-image: url('/assets/icons/disk_ram.png');
+  background-image: url('/app/assets/icons/disk_ram.png');
 }
 
 .sidebar {

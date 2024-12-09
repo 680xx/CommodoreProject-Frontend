@@ -23,13 +23,13 @@
 
 .titleBar_left{
   width: 660px;
-  background-image: url('/assets/backgrounds/wbbar_left.png');
+  background-image: url('../app/assets/backgrounds/wbbar_left.png');
 }
 
 .titleBar_center {
   flex-grow: 1;
   display: flex;
-  background-image: url('/assets/backgrounds/wbbar_center.png');
+  background-image: url('../app/assets/backgrounds/wbbar_center.png');
   align-items: center;
   justify-content: end;
   padding-right: 20px;
@@ -39,7 +39,7 @@
 
 .titleBar_right {
   width: 111px;
-  background-image: url('/assets/backgrounds/wbbar_right.png');
+  background-image: url('../app/assets/backgrounds/wbbar_right.png');
 }
 
 .view_sidebar {
@@ -76,13 +76,13 @@
 .button_login, .button_logout{
   width: 62px;
   height: 61px;
-  background-image: url('/assets/icons/disk_ram.png');
+  background-image: url('../app/assets/icons/disk_ram.png');
 }
 
 .button_register {
   width: 67px;
   height: 58px;
-  background-image: url('/assets/icons/disk.png');
+  background-image: url('../app/assets/icons/disk.png');
 }
 
 .button-text {

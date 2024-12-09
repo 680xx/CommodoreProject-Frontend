@@ -11,23 +11,29 @@
 
     </div>
     <div class="sidebar">
-      <div class="button">
-        <button class="button_logout" (click)="onLogoutClick()"></button>
+      <div [appHideIfClaimsNotMet]="claimReq.notAuthenticated">
+        <div class="button">
+          <button class="button_logout" (click)="onLogoutClick()"></button>
+        </div>
+        <div class="button_text">
+          Logout
+        </div>
       </div>
-      <div class="button_text">
-        Logout
+        <div [appHideIfClaimsNotMet]="claimReq.authenticated">
+        <div class="button">
+          <button class="button_login" (click)="onLoginClick()"></button>
+        </div>
+        <div class="button_text">
+          Login
+        </div>
       </div>
-      <div class="button">
-        <button class="button_login" (click)="onLoginClick()"></button>
-      </div>
-      <div class="button_text">
-        Login
-      </div>
-      <div class="button">
-        <button class="button_register" (click)="onRegisterClick()"></button>
-      </div>
-      <div class="button_text">
-        Register
+      <div [appHideIfClaimsNotMet]="claimReq.authenticated">
+        <div class="button">
+          <button class="button_register" (click)="onRegisterClick()"></button>
+        </div>
+        <div class="button_text">
+          Register
+        </div>
       </div>
     </div>
   </div>

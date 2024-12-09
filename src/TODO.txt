@@ -8,3 +8,5 @@ rename ccs classes
 monitor background
 
 kinder eggs (background)
+
+not authenticated -> logout

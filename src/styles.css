@@ -1,14 +1,14 @@
 @font-face {
   font-family: 'topaz_a500';
-  src: url('assets/fonts/topaz_a500.ttf') format('truetype');
+  src: url('app/assets/fonts/topaz_a500.ttf') format('truetype');
   font-weight: 500;
 }
 
 body {
-  background-image: url('assets/backgrounds/main.png');
+  background-image: url('app/assets/backgrounds/main2.png');
   background-repeat: repeat;
   color: #ffffff;
-  cursor: url('/assets/cursors/pointer.png'), auto;
+  cursor: url('/app/assets/cursors/pointer.png'), auto;
 
 }
 
