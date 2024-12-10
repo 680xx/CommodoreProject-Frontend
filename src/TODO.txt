@@ -9,6 +9,4 @@ monitor background
 
 kinder eggs (background)
 
-resolution desktop
-
 error * 3 landing page

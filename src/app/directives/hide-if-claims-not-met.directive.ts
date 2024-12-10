@@ -1,5 +1,5 @@
-import {Directive, ElementRef, Input, OnInit} from '@angular/core';
-import {AuthService} from '../services/auth.service';
+import { Directive, ElementRef, Input, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 @Directive({
   selector: '[appHideIfClaimsNotMet]',

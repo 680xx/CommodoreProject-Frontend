@@ -1,10 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-import {AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, ValidatorFn, Validators} from '@angular/forms';
-import {CommonModule} from '@angular/common';
-import {FirstKeyPipe} from '../../pipes/first-key.pipe';
-import {AuthService} from '../../services/auth.service';
-import {Router} from '@angular/router';
-
+import { Component, OnInit } from '@angular/core';
+import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, ValidatorFn, Validators } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { FirstKeyPipe } from '../../pipes/first-key.pipe';
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',

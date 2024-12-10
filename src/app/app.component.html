@@ -7,32 +7,28 @@
   <div class="view_sidebar">
     <div class="view">
 
-<router-outlet />
+      <router-outlet />
 
     </div>
     <div class="sidebar">
-        <div *ngIf="isLoggedIn" class="button">
-          <button class="button_logout" (click)="onLogoutClick()"></button>
-        </div>
-        <div *ngIf="isLoggedIn" class="button_text">
-          Logout
-        </div>
-        <div [appHideIfClaimsNotMet]="claimReq.authenticated">
-        <div class="button">
-          <button class="button_login" (click)="onLoginClick()"></button>
-        </div>
+      <div *ngIf="isLoggedIn">
+        <button class="button_logout" (click)="onLogoutClick()"></button>
         <div class="button_text">
-          Login
+          Logout
         </div>
       </div>
       <div [appHideIfClaimsNotMet]="claimReq.authenticated">
-        <div class="button">
-          <button class="button_register" (click)="onRegisterClick()"></button>
-        </div>
+        <button class="button_login" (click)="onLoginClick()"></button>
         <div class="button_text">
-          Register
+          Login
         </div>
+    </div>
+    <div [appHideIfClaimsNotMet]="claimReq.authenticated">
+      <button class="button_register" (click)="onRegisterClick()"></button>
+      <div class="button_text">
+        Register
       </div>
+    </div>
     </div>
   </div>
 </div>

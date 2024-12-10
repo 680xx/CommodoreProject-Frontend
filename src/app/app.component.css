@@ -1,18 +1,11 @@
 .default {
-  display: flex;
-  flex-direction: column;
-  width: 1280px;
-  height: 960px;
-  /*width: 1024px;            // Laptop*/
-  /*height: 768px;            // Laptop*/
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  overflow: hidden;
+  height: 70vh;
+  width: calc(70vh * (4 / 3));              /* 4:3 bildförhållande */
   font-family: 'topaz_a500', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
 }
 
 .titleBar {
@@ -44,34 +37,29 @@
 
 .view_sidebar {
   display: flex;
-  flex-grow: 1;
   flex-direction: row;
+  flex-grow: 1;
 }
 
 .view {
-  width: 1040px;
+  flex-grow: 1;
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  padding-top: 4%;
-  justify-content: start;
+  flex-basis: 14%;
+  padding-top: 6%;
+  justify-content: center;
   align-items: center;
 }
 
-.button_login, .button_register, .button_logout {
+button {
   display: flex;
   background-color: transparent;
-  background-size: cover;
-  border: none;
+  border: 0;
   cursor: pointer;
   }
-
-.button {
-  padding-top: 14%;
-}
 
 .button_login, .button_logout{
   width: 62px;
@@ -85,7 +73,9 @@
   background-image: url('../app/assets/icons/disk.png');
 }
 
-.button-text {
+.button_text {
   display: flex;
-  margin-top: 4px;
+  justify-content: center;
+  padding-top: 2px;
+  padding-bottom: 20px;
 }

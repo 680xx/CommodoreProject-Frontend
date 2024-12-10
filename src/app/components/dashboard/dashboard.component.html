@@ -1,3 +1,64 @@
+<div class="container">
+  <div class="top">
+    <div class="top-left"></div>
+    <div class="top-middle"></div>
+    <div class="top-right"></div>
+  </div>
+  <div class="middle">
+    <div class="middle-left">
+      <div class="middle-left-top"></div>
+      <div class="middle-left-center"></div>
+      <div class="middle-left-bottom"></div>
+    </div>
+    <div class="middle-middle">
+
+
+      <div class="dashboard-container">
+        <div class="button-container">
+          <button class="button_user-password" (click)="onPasswordClick()"></button>
+          <div class="button_text">
+            Change Password
+          </div>
+        </div>
+
+        <div class="button-container">
+          <div [appHideIfClaimsNotMet]="claimReq.adminOrOwner">
+            <div class="button">
+              <button class="button_user-registry" (click)="onUserRegistryClick()"></button>
+            </div>
+            <div class="button_text">
+              User Registry
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="middle-right">
+      <div class="middle-right-top"></div>
+      <div class="middle-right-center"></div>
+      <div class="middle-right-bottom"></div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="bottom-left"></div>
+    <div class="bottom-middle"></div>
+    <div class="bottom-right"></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!--
 <div class="dashboard-container">
 
   <div class="sidebar">
@@ -12,3 +73,4 @@
     </div>
   </div>
 </div>
+-->

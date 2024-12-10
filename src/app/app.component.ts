@@ -4,7 +4,7 @@ import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
 import { claimReq } from './utils/claimReq-utils';
 import { HideIfClaimsNotMetDirective } from './directives/hide-if-claims-not-met.directive';
-import {NgIf} from '@angular/common';
+import { NgIf } from '@angular/common';
 
 
 @Component({

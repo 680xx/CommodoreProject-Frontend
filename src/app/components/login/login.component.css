@@ -4,7 +4,7 @@
   width: 600px;
   height: 400px;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   overflow: hidden;
@@ -68,57 +68,6 @@
   max-width: 100%;
   background-image: url('../../assets/backgrounds/main2.png');
   background-repeat: repeat;
-}
-
-.menu {
-  height: 80px;
-  margin-top: auto;
-}
-
-.button_login {
-  width: 126px;
-  height: 50px;
-  background-image: url('../../assets/icons/drawer_closed.png');
-  background-color: transparent;
-  background-size: cover;
-  background-position: center;
-  border: none;
-  cursor: pointer;
-}
-
-.button_register {
-  width: 126px;
-  height: 50px;
-  background-image: url('../../assets/icons/drawer_qmark.png');
-  background-color: transparent;
-  background-size: cover;
-  background-position: center;
-  border: none;
-  cursor: pointer;
-}
-
-.button-container {
-  display: flex;
-  flex-direction: row;
-  align-items: end;
-  justify-content: end;
-  padding-right: 40px;
-  gap: 20px;
-}
-
-.button_text-container {
-  display: flex;
-  flex-direction: row;
-  align-items: end;
-  justify-content: end;
-  padding-right: 40px;
-  gap: 40px;
-}
-
-.button-text {
-  margin-top: 1px;
-  text-align: center;
-  padding-right: 30px;
 }
 
 .middle-right {
