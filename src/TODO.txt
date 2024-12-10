@@ -9,4 +9,6 @@ monitor background
 
 kinder eggs (background)
 
-not authenticated -> logout
+resolution desktop
+
+error * 3 landing page
