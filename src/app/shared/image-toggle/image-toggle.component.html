@@ -1,0 +1,10 @@
+<div style="padding-top: 10px" (click)="onComponentClick($event)">
+  <img
+    [src]="currentImage"
+    (click)="onSingleClick()"
+    (dblclick)="onDoubleClick()"
+    style="width: auto; height: auto;" />
+</div>
+<div style="padding-top: 2px;">
+  {{ buttonText }}
+</div>

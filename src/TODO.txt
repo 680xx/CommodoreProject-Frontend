@@ -1,12 +1,14 @@
 ﻿
-Single/Double click icons (JavaScript)
-
 Workbench window : active/inactive/move?
 
 rename ccs classes
 
 monitor background
 
-kinder eggs (background)
+update graphics
 
 error * 3 landing page
+
+window title
+
+close windows (parent?)

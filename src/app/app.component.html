@@ -11,23 +11,33 @@
 
     </div>
     <div class="sidebar">
+
       <div *ngIf="isLoggedIn">
-        <button class="button_logout" (click)="onLogoutClick()"></button>
-        <div class="button_text">
-          Logout
-        </div>
+        <app-image-toggle
+          style="text-align: center"
+          [image1]="'app/assets/icons/drawer_closed.png'"
+          [image2]="'app/assets/icons/drawer_qmark.png'"
+          [buttonText]="'Logout'"
+          (buttonClicked)="handleOnLogoutClick()">
+        </app-image-toggle>
       </div>
       <div [appHideIfClaimsNotMet]="claimReq.authenticated">
-        <button class="button_login" (click)="onLoginClick()"></button>
-        <div class="button_text">
-          Login
-        </div>
+        <app-image-toggle
+          style="text-align: center"
+          [image1]="'app/assets/icons/drawer_closed.png'"
+          [image2]="'app/assets/icons/drawer_qmark.png'"
+          [buttonText]="'Login'"
+          (buttonClicked)="handleOnLoginClick()">
+        </app-image-toggle>
     </div>
     <div [appHideIfClaimsNotMet]="claimReq.authenticated">
-      <button class="button_register" (click)="onRegisterClick()"></button>
-      <div class="button_text">
-        Register
-      </div>
+      <app-image-toggle
+        style="text-align: center"
+        [image1]="'app/assets/icons/drawer_closed.png'"
+        [image2]="'app/assets/icons/drawer_qmark.png'"
+        [buttonText]="'Register'"
+        (buttonClicked)="handleOnRegisterClick()">
+      </app-image-toggle>
     </div>
     </div>
   </div>

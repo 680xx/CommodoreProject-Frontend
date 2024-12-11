@@ -5,12 +5,12 @@ import { AuthService } from './services/auth.service';
 import { claimReq } from './utils/claimReq-utils';
 import { HideIfClaimsNotMetDirective } from './directives/hide-if-claims-not-met.directive';
 import { NgIf } from '@angular/common';
-
+import {ImageToggleComponent} from './shared/image-toggle/image-toggle.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HideIfClaimsNotMetDirective, NgIf],
+  imports: [RouterOutlet, HideIfClaimsNotMetDirective, NgIf, ImageToggleComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -31,17 +31,17 @@ export class AppComponent  implements OnInit {
     })
   }
 
-onLogoutClick() {
+  handleOnLogoutClick() {
   this.authService.deleteToken();
   this.router.navigateByUrl('login');
   window.location.reload();
 }
 
-onLoginClick() {
+  handleOnLoginClick() {
   this.router.navigate(['/login']);
 }
 
-onRegisterClick() {
+  handleOnRegisterClick() {
   this.router.navigate(['/register'])
 }
 
